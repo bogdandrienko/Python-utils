@@ -1,3 +1,41 @@
+import base64
+import chardet
+
+str1 = b'123BNO'
+
+# utf-8 win-1251 win-1252 ascii
+
+
+rList = [1, 2, 3, 4, 5]
+
+arr = bytes(rList)
+print(arr)
+
+encod = base64.b64encode("Admin Admin".encode())
+
+print(encod)
+
+decod = base64.b64decode(encod)
+
+print(decod.decode())
+
+source = "Р—Р°РєР°Р· Р·РІРѕРЅРєР° С‚РµС…РЅРёС‡РµСЃРєРѕР№ РїРѕРґРґРµСЂР¶РєРё"
+print(f"source: {source}\n")
+
+print(chardet.detect(source.encode())['encoding'])
+
+source1 = source.encode(encoding='cp1251')
+print(f"source1: {source1}\n")
+
+source2 = source1.decode(encoding='utf-8')
+print(f"source2: {source2}\n")
+
+
+# import codecs
+# f = codecs.open('input.txt', encoding='cp1251')
+# assert isinstance(f.read(), unicode)
+
+
 class EncryptingClass:
     @staticmethod
     def encrypt_text(text: str, hash_chars: str):
@@ -35,6 +73,7 @@ class EncryptingClass:
         def example_decrypt_text():
             value = EncryptingClass.decrypt_text(text='wvuts', hash_chars='321')
             print(value)
+
 
 class UtilsClass:
     @staticmethod

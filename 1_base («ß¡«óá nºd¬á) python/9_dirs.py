@@ -1,4 +1,5 @@
 import os
+import shutil
 
 # os.walk() # идёт по пути, и берёт все имена объектов
 
