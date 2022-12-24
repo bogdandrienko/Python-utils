@@ -1,10 +1,4 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
 # Environments
-*.env
 .env
 .venv
 env/
@@ -12,3 +6,17 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+node_modules/
+__pycache__/
+*__pycache__/
+*.pyc
+*.pyc
+
+idea
+idea\
+idea/
+.idea
+.idea\
+.idea/
+**/.idea/
